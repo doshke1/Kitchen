@@ -69,29 +69,29 @@ public class Recipe implements Priceable, Weightable {
         isFavorite = favorite;
     }
 
-//    public void deleteIngredient(String name) {
-//        recipeIngredients.remove(name);
-//    }
+    public void deleteIngredient(String name) {
+        recipeIngredients.remove(name);
+    }
 
-//    public void addIngredient(RecipeIngredient ingredient) {
-//        recipeIngredients.add(ingredient);
-//    }
+    public void addIngredient(RecipeIngredient ingredient) {
+        recipeIngredients.add(ingredient);
+    }
 
-//    public Recipe newRecipe(Double percent, Recipe recipe) {
-//        Recipe newRecipe = new Recipe();
-//        List<RecipeIngredient> recipeIngredientList = new ArrayList<>();
-//        newRecipe.setName(recipe.getName());
-//        newRecipe.setRecipeLevel(recipe.getRecipeLevel());
-//        for (RecipeIngredient ingredient : recipe.getRecipeIngredients()) {
-//            RecipeIngredient recipeIngredient = new RecipeIngredient();
-//            Double quantityInRecipe = ingredient.getQuantityInRecipe() * percent / 100;
-//            recipeIngredient.setQuantityInRecipe(quantityInRecipe);
-//            recipeIngredient.setWeightedIngredient(ingredient.getWeightedIngredient());
-//            recipeIngredientList.add(recipeIngredient);
-//        }
-//
-//        return newRecipe;
-//    }
+    public Recipe newRecipe(Double percent, Recipe recipe) {
+        Recipe newRecipe = new Recipe();
+        List<RecipeIngredient> recipeIngredientList = new ArrayList<>();
+        newRecipe.setName(recipe.getName());
+        newRecipe.setRecipeLevel(recipe.getRecipeLevel());
+        for (RecipeIngredient ingredient : recipe.getRecipeIngredients()) {
+            RecipeIngredient recipeIngredient = new RecipeIngredient();
+            Double quantityInRecipe = ingredient.getQuantityInRecipe() * percent / 100;
+            recipeIngredient.setQuantityInRecipe(quantityInRecipe);
+            recipeIngredient.setWeightedIngredient(ingredient.getWeightedIngredient());
+            recipeIngredientList.add(recipeIngredient);
+        }
+
+        return newRecipe;
+    }
 
     @Override
     public String toString() {
